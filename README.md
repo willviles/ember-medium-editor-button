@@ -1,27 +1,56 @@
-# ember-medium-editor-button
+# Ember Medium Editor Button
 
-This README outlines the details of collaborating on this Ember addon.
+This Ember Addon extends the functionality of [ember-cli-medium-editor](https://github.com/lukebrenton/ember-cli-medium-editor) to include [MediumButton](https://github.com/orthes/medium-editor-insert-plugin). MediumButton enables a quick way to add custom buttons to the [Medium Editor](https://github.com/yabwe/medium-editor) toolbar.
+
+## Demo
+https://stillhart.biz/project/MediumButton/
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd ember-medium-editor-button`
-* `npm install`
-* `bower install`
+To install, make sure you've installed [ember-cli-medium-editor](https://github.com/lukebrenton/ember-cli-medium-editor).
 
-## Running
+`ember install ember-cli-medium-editor`
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+Then simply run:
 
-## Running Tests
+`ember install ember-medium-editor-button`
 
-* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
+To satisfy jshint, add `MediumButton` to the predef array in .jshintrc.
 
-## Building
+## Usage
 
-* `ember build`
+Follow the usage instructions in the [MediumButton](https://github.com/arcs-/medium-button#usage) plugin.
 
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+This addon simply includes the plugin via Bower and exposes MediumButton as an ES6 import.
+
+``` javascript
+import MediumButton from 'ember-medium-editor-button';
+```
+
+## Example
+
+The following example adds a simple custom button which generates a `<hr>` horizontal line.
+
+``` javascript
+import MediumButton from 'ember-medium-editor-button';
+
+{
+  options: {
+    // ... ember-cli-medium-editor options
+    extensions: {
+      'hr': new MediumButton({
+        label: '<i class="icon-hr"></i>',
+        action(html, mark, parent) {
+          Ember.$(parent).remove();
+          return '<hr>';
+        }
+      })
+    },
+    toolbar: {
+      buttons: [
+        'hr'
+      ]
+    }  
+  }
+}
+```
