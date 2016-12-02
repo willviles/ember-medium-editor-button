@@ -1,17 +1,24 @@
 {
   "name": "ember-medium-editor-button",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.0.1",
+  "description": "An extension to Ember CLI Medium Editor to enable custom buttons with the MediumButton plugin",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "ember-cli",
+    "editor",
+    "medium",
+    "wysiwyg",
+    "rich-text",
+    "medium-editor",
+    "medium-button",
+    "ember-medium-editor",
+    "ember-cli-medium-editor"
   ],
-  "license": "MIT",
-  "author": "",
-  "directories": {
-    "doc": "doc",
-    "test": "tests"
-  },
-  "repository": "",
+  "license": "ISC",
+  "authors": [
+    "Will Viles <will@vil.es>"
+  ],
+  "repository": "https://github.com/willviles/ember-medium-editor-button",
   "scripts": {
     "build": "ember build",
     "start": "ember server",
