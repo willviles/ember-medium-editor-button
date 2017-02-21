@@ -1,4 +1,5 @@
-# Ember Medium Editor Button
+Ember Medium Editor Button [![npm](https://img.shields.io/npm/v/ember-medium-editor-button.svg)](https://www.npmjs.com/package/ember-medium-editor-button)
+======
 
 This Ember Addon extends the functionality of [ember-cli-medium-editor](https://github.com/lukebrenton/ember-cli-medium-editor) to include [MediumButton](https://github.com/orthes/medium-editor-insert-plugin). MediumButton enables a quick way to add custom buttons to the [Medium Editor](https://github.com/yabwe/medium-editor) toolbar.
 
