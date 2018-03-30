@@ -1,3 +1,5 @@
+**This addon is deprecated as it is based on the unmaintained [Ember CLI Medium Editor](https://github.com/lukebrenton/ember-cli-medium-editor). Please check out its successor [Ember Medium Editor](https://github.com/kolybasov/ember-medium-editor) instead.**
+
 Ember Medium Editor Button [![npm](https://img.shields.io/npm/v/ember-medium-editor-button.svg)](https://www.npmjs.com/package/ember-medium-editor-button)
 ======
 
